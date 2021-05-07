@@ -1,0 +1,41 @@
+#main-content {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#main-content a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+#main-content a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+#links-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Display header for link and text in a column, centered in div */
+.links-flex-item {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+#integrity {
+  background-color: lightblue;
+}
+
+#data {
+  background-color: lightcyan;
+}
+
+#latex {
+  background-color: lightskyblue;
+}

@@ -1,0 +1,28 @@
+{% macro grade_dropwdown(integer) %}
+{% if integer == -2 %}
+<option value="-1">N/A</option>
+<option value="-2" selected="selected">Missing</option>
+<option value="completed">Completed</option>
+{% elif integer == -1 %}
+<option value="-1" selected="selected">N/A</option>
+<option value="-2">Missing</option>
+<option value="completed">Completed</option>
+{% elif integer >= 0 and integer <= 100 %}
+<option value="-1">N/A</option>
+<option value="-2">Missing</option>
+<option value="completed" selected="selected">Completed</option>
+{% endif %}
+{% endmacro %}
+
+<!--Has to be in one line for default values to appear properly-->
+{% macro grade_val(integer) %}{% if integer >= 0 and integer <= 100 %}{{ integer }}{% endif %}{% endmacro %}
+
+{% macro missing_grade(integer) %}
+{% if integer == -2 %}
+MISSING
+{% elif integer == -1 %}
+N/A
+{% else %}
+{{ integer }}
+{% endif %}
+{% endmacro %}

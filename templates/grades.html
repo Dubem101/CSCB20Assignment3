@@ -1,0 +1,74 @@
+{% extends 'template.html' %}
+{% from "macros.html" import missing_grade with context %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/components.css" />
+<link rel="stylesheet" href="/static/styles/tablehelpers.css" />
+<link rel="stylesheet" href="/static/styles/grades.css" />
+{% endblock %}
+
+{% block title %}Grades{% endblock %}
+
+{% block header %}
+{% if session['accountType'] == "Student" %}
+Welcome, View Your Grades
+{% else %}
+Welcome, View All Students' Grades
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if session['accountType'] == "Student" %}
+<ul class="display-card-container">
+  <li class="display-card">
+    <h3 class="student-name">
+      {{ grade["FirstName"] + " " + grade["LastName"] }}
+    </h3>
+    <div class="div-table">
+      {% for column in columns %}
+      <div class="assessment-item">
+        <header class="table-head">Assessment</header>
+        <div class="table-data">{{ column }}</div>
+        <header class="table-head">Grade</header>
+        <div class="table-data">{{ missing_grade(grade[column]) }}</div>
+        <div class="table-data remark-btn-data">
+          <a href="{{ url_for('remarkform', assessment=column) }}">
+            Submit Remark
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </li>
+</ul>
+{% else %}
+<ul class="display-card-container">
+  {% for grade in grades %}
+  <li class="display-card">
+    <details>
+      <summary>
+        <div class="summary-container">
+          {{ grade["FirstName"] + " " + grade["LastName"] }}
+          <div class="edit-grades-btn round-btn">
+            <a href="{{ url_for('editgrades', accountno=grade['AccountNumber']) }}">
+              Edit grades for this student
+            </a>
+          </div>
+        </div>
+      </summary>
+      <div class="student-grade div-table">
+        {% for column in columns %}
+        <div class="assessment-item">
+          <header class="table-head">Assessment</header>
+          <div class="table-data">{{ column }}</div>
+          <header class="table-head">Grade</header>
+          <div class="table-data">{{ missing_grade(grade[column]) }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </details>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

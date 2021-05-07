@@ -1,0 +1,49 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/dashboard.css" />{% endblock %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block header %}Welcome, {{ session['accountType'] + " " + get_response['full_name'] }}{% endblock %}
+
+{% block content %}
+<section id="dashboard-links">
+    <a href="{{ url_for('grades')}}" id="grades-card" class="dashboard-card">
+        <div class="inside-card">
+            <p>
+                {% if session['accountType'] == "Student" %}
+                View
+                {% else %}
+                Edit/View
+                {% endif %} Grades
+            </p>
+        </div>
+    </a>
+    <a href="{{ url_for('feedback')}}" id="feedback-card" class="dashboard-card">
+        <div class="inside-card">
+            <p>
+                {% if session['accountType'] == "Student" %}
+                Submit
+                {% else %}
+                View
+                {% endif %}
+                Feedback
+            </p>
+        </div>
+    </a>
+    <a href="{{ url_for('remarks')}}" id="remark-card" class="dashboard-card">
+        <div class="inside-card">
+            <p>
+                {% if session['accountType'] == "Student" %}
+                View Remark Requests
+                {% else %}
+                View Remarks
+                {% endif %}
+            </p>
+        </div>
+    </a>
+</section>
+<a id="signout" href="/signout">Sign Out</a>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/formhelpers.css" />
+<link rel="stylesheet" href="/static/styles/remarkform.css" />
+{% endblock %}
+
+{% block title %}Remark Request{% endblock %}
+
+{% block header %}Remark Request{% endblock %}
+
+{% block content %}
+{% if session['accountType'] == "Student" %}
+<h3 id="remark-info">Please respond to the question below to request a remark for {{ assessment + ", grade was " +  grade|string() }}</h3>
+<form method="POST">
+	<div class="form-element">
+		<label>What was the issue with your mark? Explain why you believe it should be changed.</label>
+		<textarea id="textbox" name="remark_expl" class="form-control area" minlength="10" required></textarea>
+	</div>
+	<div class="form-element">
+		<button id="submit" type="submit">Submit Remark Request</button>
+	</div>
+</form>
+{% endif %}
+{% endblock %}

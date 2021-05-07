@@ -1,0 +1,56 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/formhelpers.css" />
+<link rel="stylesheet" href="/static/styles/tablehelpers.css" />
+<link rel="stylesheet" href="/static/styles/remarks.css" />
+{% endblock %}
+
+{% block title %}Remarks{% endblock %}
+
+{% block header %}
+{% if session['accountType'] == "Student" %}
+Welcome, View All Your Remark Requests
+{% else %}
+Welcome, View All Remark Requests
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<ul class="display-card-container">
+    {% for remark in remarks %}
+    <li class="display-card">
+        <details>
+            <summary>
+                <div class="summary-container">
+                    {% if session['accountType'] == "Student" %}
+                    {{ remark['Evaluation'] }}
+                    <div class="remark-status {{ remark['Status'] }}">
+                        {{ remark["Status"] }}
+                    </div>
+                    {% else %}
+                    {{ remark['FirstName'] + " " + remark['LastName'] + " - " + remark['Evaluation'] }}
+                    {% if remark['Status'] == "Open" %}
+                    <form method="POST">
+                        <input type="hidden" name="remark_assess" value="{{ remark['Evaluation'] }}">
+                        <button class="close-remark" type="submit" name="stud_no" value="{{ remark['AccountNumber'] }}">
+                            Resolve remark request and adjust grade
+                        </button>
+                    </form>
+                    {% else %}
+                    <div class="remark-status {{ remark['Status'] }}">
+                        {{ remark['Status'] }}
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </summary>
+            <div class="remark-explanation div-table">
+                <header class="table-head">Explanation</header>
+                <div class="table-data">{{ remark['Explanation'] }}</div>
+            </div>
+        </details>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

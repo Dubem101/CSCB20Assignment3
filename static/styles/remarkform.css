@@ -1,0 +1,19 @@
+#remark-info{
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+/* More visible labels */
+label {
+    font-size: 1.25rem;
+}
+
+/* Bigger text area */
+#textbox {
+    height: 50vh;
+}
+
+/* Separate form */
+form {
+    margin-top: 24px;
+}

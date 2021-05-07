@@ -1,0 +1,5 @@
+Honor Code: We pledge that this program represents my own program code and that we have coded on my own. We received help from no one in designing and debugging our program. We have also read the plagiarism section in the course info sheet of CSC B20 and understand the consequences.
+
+Signed,
+Chidubem Ogbudibe, 1005907538
+Aleksandar Chionglo, 1006137645

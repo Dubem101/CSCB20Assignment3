@@ -1,0 +1,55 @@
+.student-name {
+  margin-bottom: 16px;
+}
+
+/* Div for entire student grade report */
+.student-grade {
+  margin-top: 16px;
+}
+
+/* an individual assessment + mark combo */
+.assessment-item {
+  margin-bottom: 50px;
+}
+
+/* Edit grades button styling */
+/* extends round-btn */
+.edit-grades-btn a {
+  background-color: var(--blue-main);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgb(15, 45, 109)
+  );
+  color: white;
+}
+
+.edit-grades-btn a:hover {
+  background-color: rgb(30, 49, 90);
+}
+
+/* Remark form button styling */
+/* extends round-btn */
+
+/* Table data with remark button in it */
+.remark-btn-data {
+  text-align: center;
+}
+
+.remark-btn-data a {
+  background-color: var(--blue-uoft);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    var(--blue-main)
+  );
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.remark-btn-data a:hover {
+  background-color: lightblue;
+  transition: 0.3s;
+  text-decoration: underline;
+}

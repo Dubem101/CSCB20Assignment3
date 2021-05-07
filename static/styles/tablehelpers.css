@@ -1,0 +1,72 @@
+/* Table-like */
+.div-table {
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-data, .table-head {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table-head {
+  background-color: #dddddd;
+}
+
+/* Modern table display card styling */
+/* Flex container */
+.display-card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.display-card {
+  background-color: whitesmoke;
+  padding: 3rem;
+  margin: 10px;
+  box-shadow: 0 0 3px 1px grey;
+  font-size: 2rem;
+}
+
+/* With details and summaries */
+.display-card summary {
+  outline: none;
+}
+
+/* Flex summary */
+.display-card .summary-container {
+  font-size: 4vh;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+.display-card summary:hover {
+  cursor: pointer;
+}
+
+.display-card summary::marker {
+  font-size: 3rem;
+}
+
+.div-table .table-data {
+  font-size: 1.5rem;
+}
+
+.div-table .table-head {
+  font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+/* Tablets and up */
+@media only screen and (min-width: 769px) {
+  .display-card .summary-container {
+    flex-direction: row;
+  }
+}

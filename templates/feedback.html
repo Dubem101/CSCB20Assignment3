@@ -1,0 +1,65 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/formhelpers.css" />
+<link rel="stylesheet" href="/static/styles/tablehelpers.css" />
+<link rel="stylesheet" href="/static/styles/feedback.css" />
+{% endblock %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block header %}
+{% if session['accountType'] == "Student" %}
+Submit Feedback
+{% else %}
+Welcome, View Your Feedback
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if session['accountType'] == "Student" %}
+<form method="POST">
+    <div class="form-element">
+        <label>Which instructor is this for?</label>
+        <select name="instr_no" class="form-control">
+            {% for acct_no, name in instructors.items() %}
+            <option value="{{ acct_no }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    {% for question_no, question_text in QUESTIONS.items() %}
+    <div class="form-element">
+        <label>{{ question_text }}</label>
+        <textarea name="{{ 'question' + question_no|string() }}" class="form-control area"></textarea>
+    </div>
+    {% endfor %}
+    <div class="form-element">
+        <button id="submit" type="submit">Submit Feedback</button>
+    </div>
+</form>
+{% else %}
+<ul id="student-responses" class="display-card-container">
+    {% for response in feedback %}
+    <li class="student-response display-card">
+        <details>
+            <summary>
+                {{ response["FirstName"] + " " + response["LastName"] }}
+            </summary>
+            <div class="responses-table div-table">
+                {% for q_no in range(1, NUM_Q + 1) %}
+                {% if response['Q' + q_no|string()] and response['Q' + q_no|string()] != "" %}
+                <div class="responses-table-item">
+                    <header class="table-head">Question</header>
+                    <div class="table-data">{{ QUESTIONS[q_no] }}</div>
+                    <header class="table-head">Comments</header>
+                    <div class="table-data">{{ response['Q' + q_no|string()] }}</div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </details>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

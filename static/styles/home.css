@@ -1,0 +1,128 @@
+
+#course-description {
+  background-image: url("../images/Course_Img.jpeg");
+  color: white;
+  text-align: left;
+  padding: 60px;
+
+  margin-bottom: 10px;
+
+  text-shadow: 0px 2px 3px black;
+}
+
+#course-description a {
+  color: lightblue;
+}
+#course-description a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#course-description a:visited {
+  color: lightblue;
+}
+
+#course-team {
+  background-color: rgb(213, 210, 250);
+  padding: 15px;
+
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#course-team a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+#course-team a:visited {
+  color: blue;
+}
+
+#instructor-img {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#instructor-img img {
+  padding-right: 10px;
+}
+
+#instructor-img p {
+  padding-top: 10px;
+}
+
+#timetable {
+  background-color: lightsteelblue;
+  padding: 15px;
+
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#timetable p a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+#timetable p a:visited {
+  color: blue;
+}
+
+#upcoming-events-wrapper {
+  background-color: #7683ce;
+  text-align: center;
+
+  padding: 15px;
+  margin-top: 10px;
+}
+
+#upcoming-events-wrapper a:visited {
+  color: blue;
+}
+
+#upcoming-events-wrapper a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.upcoming-events {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.upcoming-events-item {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--grey-main);
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+/* Built-in tags */
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0px 2px 5px black;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+/* Mobile responsiveness */
+/* Tablets and up */
+@media only screen and (min-width: 769px) {
+  #instructor-img {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,103 @@
+/* List of weekly module styling */
+.weekly-item {
+  background-color: whitesmoke;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 3rem;
+  margin: 10px;
+  box-shadow: 0 0 3px 1px grey;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console,
+    Monaco, monospace;
+}
+
+.weekly-item.right {
+  background-image: url(../images/rightsash.png);
+}
+
+.weekly-item.left {
+  background-image: url(../images/leftsash.png);
+}
+
+.weekly-item summary {
+  outline: none;
+}
+
+.weekly-item summary:hover{
+  cursor: pointer;
+}
+
+.weekly-item summary::marker {
+  font-size: 3rem;
+}
+
+.weekly-item .summary-container {
+  font-size: 3vh;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+/* Recording button, extends round-btn */
+.recording-button a {
+  background-color: var(--blue-main);
+  color: white;
+}
+
+.recording-button a:hover {
+  background-color: lightblue;
+  color: var(--blue-main);
+}
+
+/* Relevant links for a module */
+.links {
+  background-color: white;
+  box-shadow: 0 0 5px 2px grey;
+  margin-top: 20px;
+}
+
+.links-item {
+  border: 2px solid grey;
+  padding: 10px;
+  font-size: 1.25rem;
+  height: fit-content;
+}
+
+.links-item b{
+  display: inline-block;
+}
+
+.links-item em{
+  color: red;
+  display: inline-block;
+}
+
+.inline-link-item {
+  background-color: var(--grey-lighter);
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.links-item.separator {
+  color: white;
+  background-color: var(--blue-main);
+  padding: 5px;
+  font-size: 1rem;
+  height: fit-content;
+}
+
+.links-item a:hover {
+  text-decoration: underline;
+  color: var(--blue-main);
+}
+
+/* Mobile responsiveness */
+/* Tablets and up */
+@media only screen and (min-width: 769px) {
+  .weekly-item .summary-container {
+    flex-direction: row;
+  }
+}

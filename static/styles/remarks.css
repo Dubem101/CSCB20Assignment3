@@ -1,0 +1,36 @@
+/* Close remark button */
+.close-remark {
+  background-color: rgb(255, 195, 146);
+  border-radius: 10px;
+  color: black;
+  padding: 10px;
+  font-size: 2vh;
+  margin: 5px;
+}
+
+.close-remark:hover {
+  background-color: rgb(253, 157, 13);
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Margin for remark explanation table */
+.remark-explanation{
+  margin-top: 16px;
+}
+
+/* Remark statuses */
+.remark-status {
+  color: white;
+  padding: 10px;
+  font-size: 3vh;
+}
+
+.remark-status.Open {
+  color: rgb(7, 99, 56)
+}
+
+.remark-status.Resolved {
+  color: rgb(238, 66, 66)
+}

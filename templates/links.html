@@ -1,0 +1,40 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/links.css" />{% endblock %}
+
+{% block title %}Links{% endblock %}
+
+{% block header %}Some Helpful Links{% endblock %}
+
+{% block content %}
+<div id="links-flex">
+  <div id="integrity" class="links-flex-item">
+    <a href="https://www.academicintegrity.utoronto.ca/">
+      <h3>Academic Integrity</h3>
+    </a>
+    <br />
+    <p>Read the above link for information on academic offences.</p>
+  </div>
+  <div id="data" class="links-flex-item">
+    <a href="https://www.geeksforgeeks.org/data-structures/">
+      <h3>Data Structures Rundown</h3>
+    </a>
+    <p>Click above to learn more about data structures.</p>
+  </div>
+  <div id="latex" class="links-flex-item">
+    <h3>LaTex</h3>
+    <p>
+      For LaTeX installations, go to the latex project install
+      <a href="http://latex-project.org/ftp.html">website</a>. Both the
+      Windows and Mac versions listed come with editors as well as the
+      packages and compilers. Once you are up and running, I recommend
+      downloading the
+      <a href="http://tobi.oetiker.ch/lshort/lshort.pdf">Not So Short Guide to LaTeX</a>. Everything you need is
+      there, however it may be overkill. You can
+      also start with this <a href="../docs/dummy.pdf">template.tex</a> and
+      add as you need.
+    </p>
+  </div>
+</div>
+{% endblock %}

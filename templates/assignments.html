@@ -1,0 +1,53 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/assignments.css" />
+{% endblock %}
+
+{% block title %}Assignments{% endblock %}
+
+{% block header %}Assignments{% endblock %}
+
+{% block content %}
+<p>
+  All to be submitted on gradescope.
+</p>
+<ul class="assignments">
+  <li class="assignments-item" id="a1">
+    <p class="due-date">Due: <b>February 7th, 2021 12pm</b></p>
+    <h3>Assignment 1</h3>
+    <p>&#x25BC</p>
+    <div class="no-display-assignment">
+      <p>Covers: Week 1, 2, 3</p>
+      <div class="assignments-files">
+        <a href="../docs/dummy.pdf" class="assignment-button" target="_blank">A1 PDF</a>
+        <a href="../docs/dummy.pdf" class="assignment-button" target="_blank">A1 TEX</a>
+      </div>
+    </div>
+  </li>
+  <li class="assignments-item" id="a2">
+    <p class="due-date">Due: <b>March 6th, 2021 12pm</b></p>
+    <h3>Assignment 2</h3>
+    <p>&#x25BC</p>
+    <div class="no-display-assignment">
+      <p>Covers: Week 4, 5, 6</p>
+      <div class="assignments-files">
+        <a href="../docs/dummy.pdf" class="assignment-button" target="_blank">A2 PDF</a>
+        <a href="../docs/dummy.pdf" class="assignment-button" target="_blank">A2 TEX</a>
+      </div>
+    </div>
+  </li>
+  <li class="assignments-item" id="a3">
+    <p class="due-date">Due: <b>March 21th, 2021 12pm</b></p>
+    <h3>Assignment 3</h3>
+    <p>&#x25BC</p>
+    <div class="no-display-assignment">
+      <p>Covers: Week 7, 8, 9</p>
+      <div class="assignments-files">
+        <a href="../docs/dummy.pdf" class="assignment-button" target="_blank">A3 PDF</a>
+        <a href="../docs/dummy.pdf" class="assignment-button" target="_blank">A3 TEX</a>
+      </div>
+    </div>
+  </li>
+</ul>
+{% endblock %}

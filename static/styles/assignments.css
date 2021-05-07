@@ -1,0 +1,120 @@
+/* Flexblox list of assignments */
+.assignments {
+  padding: 1.5rem;
+  display: flex;
+  height: 100%;
+  font-family: "Courier New", Courier, monospace;
+  flex-direction: column;
+}
+
+.assignments-item {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 2px grey;
+  margin: 5px;
+  height: fit-content;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.assignments-item .due-date {
+  font-size: 2rem;
+  margin: auto;
+  text-shadow: 0px 0px 5px #000000;
+}
+
+.assignments-item h3 {
+  font-size: 1.5rem;
+}
+
+.assignments-item .no-display-assignment {
+  opacity: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: -3rem;
+}
+
+.assignments-item:hover .no-display-assignment {
+  opacity: 1;
+  margin-top: 0px;
+  transition: 0.5s;
+}
+
+.assignment-file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a.assignment-button {
+  display: block;
+  background-color: rgb(60, 60, 165);
+  padding: 5px;
+  color: white;
+  text-align: center;
+  border: 3px solid var(--blue-main);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.assignment-button:hover {
+  background-color: lightblue;
+  transition-duration: 0.3s;
+}
+
+/* Individual assignment background images */
+#a1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0),
+      var(--blue-main)
+    ),
+    url("../images/A1Stock.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#a2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0),
+      var(--blue-main)
+    ),
+    url("../images/A2Stock.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#a3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0),
+      var(--blue-main)
+    ),
+    url("../images/A3Stock.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  text-align: center;
+  font-size: 1.25rem;
+}
+/* Mobile responsiveness */
+/* Large tablets and up */
+@media only screen and (min-width: 800px) {
+  .assignments {
+    flex-direction: row;
+  }
+  .assignments-item {
+    width: 33%;
+    height: 50vh;
+  }
+}

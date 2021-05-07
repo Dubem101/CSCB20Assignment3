@@ -1,0 +1,104 @@
+#dashboard-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 2px grey;
+  height: fit-content;
+  padding: 10px;
+  margin: 16px;
+  color: white;
+}
+
+.inside-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 100%;
+}
+
+#grades-card {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(219, 51, 51),
+    rgb(255, 189, 169)
+  );
+}
+
+#grades-card:hover{
+  background-image: linear-gradient(
+    to bottom,
+    rgb(219, 51, 51),
+    rgb(255, 240, 235)
+  );
+}
+
+#remark-card {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(5, 121, 255),
+    rgb(169, 255, 236)
+  );
+}
+
+#remark-card:hover{
+  background-image: linear-gradient(
+    to bottom,
+    rgb(5, 121, 255),
+    rgb(226, 255, 249)
+  );
+}
+
+#feedback-card {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(18, 102, 22),
+    rgb(255, 254, 184)
+  );
+}
+
+#feedback-card:hover{
+  background-image: linear-gradient(
+    to bottom,
+    rgb(18, 102, 22),
+    rgb(255, 255, 236)
+  );
+}
+
+#signout {
+    background-color: var(--blue-uoft);
+    color: white;
+    font-size: 2rem;
+    width: auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#signout:hover {
+    background-color: rgb(64, 153, 255);
+    transition: 0.3s;
+}
+
+/* General html tags */
+body {
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+/* Large tablets and up */
+@media only screen and (min-width: 800px) {
+  #dashboard-links {
+    flex-direction: row;
+  }
+  .dashboard-card {
+    width: 33%;
+    height: 50vh;
+  }
+}

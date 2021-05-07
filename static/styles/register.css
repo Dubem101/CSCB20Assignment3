@@ -1,0 +1,25 @@
+/* Ensure space for register box */
+#signin-section {
+  height: fit-content;
+}
+
+#back-btn {
+  align-self: flex-start;
+}
+
+#back-btn img {
+  height: 40px;
+  width: 40px;
+}
+
+#register-form {
+  text-align: left;
+}
+
+/* Mobile responsiveness */
+/* Small tablets and up */
+@media only screen and (min-width: 1268px) {
+  #signin-section {
+    height: 100vh;
+  }
+}

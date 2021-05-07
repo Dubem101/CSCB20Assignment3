@@ -1,0 +1,23 @@
+#calendar {
+    width: 100%;
+    height: 60vh;
+}
+
+#ics-link {
+    font-size: 2rem;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--grey-lighter);
+    border-radius: 10px;
+    border: solid 1px var(--blue-main);
+}
+
+#ics-link:hover {
+    background-color: var(--grey-main);
+    transition: 0.3s;
+}
+
+#main-content {
+    text-align: center;
+}
+

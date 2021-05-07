@@ -1,0 +1,80 @@
+{% extends 'template.html' %}
+
+{% block head %}<link rel="stylesheet" href="/static/styles/home.css" />{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}Welcome to CSCB63!{% endblock %}
+
+{% block content %}
+<div id="course-description">
+  <h3>Course Description</h3>
+  <br />
+  <p>
+    Design, analysis, implementation and comparison of efficient data
+    structures for common abstract data types. Priority queues: heaps and
+    mergeable heaps. Dictionaries: balanced binary search trees, B-trees,
+    hashing. Amortization: data structures for managing dynamic tables and
+    disjoint sets. Data structures for representing graphs. Graph
+    searches.
+    <br />
+    Exclusion CSC263H, CSC265H, (CSCC78H) <br />
+    Prerequisite CSCB36H or (CSCB38H) & [CGPA 2.75 or enrolment in a CSC
+    subject POSt] <br />
+    Syllabus: <a href="/static/docs/dummy.pdf">Link to Syllabus</a>
+  </p>
+</div>
+<div id="course-team">
+  <h3>Course Team Information</h3>
+  <div id="instructor-img">
+    <img src="/static/images/Anna_Bretscher.jpeg" alt="Anna Bretscher">
+    <p>
+      Dr. Bretscher joined the department in 2004 after completing a Ph.D in Graph Theory at the University of
+      Toronto and Master's and Bachelor's degrees at Queen's University.
+      After teaching a course as a graduate student, Anna came to the realization that teaching students theoretical
+      concepts is where her passion lies.
+      In particular, she loves the challenge of simplifying difficult concepts and the reward of successfully
+      teaching new topics.
+      <br />
+      Dr. Anna Bretscher Email:
+      <a href="mailto:anna.bretscher@utoronto.ca">anna.bretscher@utoronto.ca</a>
+      Office: IC 493
+  </div>
+  </p>
+</div>
+<div id="timetable">
+  <h3>Timetable</h3>
+  <h4>Lecture Links</h4>
+  <p>
+    Wednesdays 3-4pm
+    <a href=" https://utoronto.zoom.us/j/89553548645">Zoom Link</a>,
+    Thursdays 9:10-11:00
+    <a href=" https://utoronto.zoom.us/j/83378932991">Zoom Link</a>
+  </p>
+  <br />
+  <h4>Office Hours</h4>
+  <p>
+    Usually Mondays 11:00-12:30, Friday 10:40-11:30. (Please see the
+    calendar for weekly changes.)
+  </p>
+</div>
+<div id="upcoming-events-wrapper">
+  <h3>Upcoming Events</h3>
+  <br />
+  <ul class="upcoming-events">
+    <li class="upcoming-events-item">
+      Midterm: March 13th 5-7pm EST
+      <a href="/calendar.html">View on Calendar</a>
+    </li>
+    <li class="upcoming-events-item">Assignment 2: March 14th 7pm EST
+      <a href="./assignments.html">
+        Go to Assignments</a>
+    </li>
+    <li class="upcoming-events-item">
+      Final: April 13th 5-7pm EST
+      <a href="https://www.utsc.utoronto.ca/registrar/examination-schedule" target="_blank">Winter 2021 Exam
+        Schedule</a>
+    </li>
+  </ul>
+</div>
+{% endblock %}

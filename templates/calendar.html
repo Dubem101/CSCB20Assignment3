@@ -1,0 +1,14 @@
+{% extends 'template.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/calendar.css" />{% endblock %}
+
+{% block title %}Calendar{% endblock %}
+
+{% block header %}Calendar{% endblock %}
+
+{% block content %}
+<iframe id="calendar"
+  src="https://calendar.google.com/calendar/embed?src=f2oogqnfo1q728k3lcbtr4v478%40group.calendar.google.com&ctz=America%2FToronto"></iframe>
+<a id="ics-link" href="../docs/basic.ics" target="_blank">.ICS File for Calendar</a>
+{% endblock %}

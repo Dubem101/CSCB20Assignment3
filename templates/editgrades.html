@@ -1,0 +1,81 @@
+{% extends 'template.html' %}
+{% from "macros.html" import grade_dropwdown with context %}
+{% from "macros.html" import grade_val with context %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/styles/formhelpers.css" />
+<link rel="stylesheet" href="/static/styles/editgrades.css" />
+<script src="/static/js/editgradeform.js"></script>
+{% endblock %}
+
+{% block title %}Edit Grades{% endblock %}
+
+{% block header %}Edit Grades of {{ form['full_name'] }}{% endblock %}
+
+{% block content %}
+<form method="POST" id="grades-form">
+    <div class="form-element">
+        <label for="assign1">Assignment 1 Status:</label>
+        <select form="grades-form" name="assign1" class="form-control dropdownSelect" id="assign1">
+            {{ grade_dropwdown(form['assign1']) }}
+        </select>
+        <div class="form-element grade-input" id="assign1-grade">
+            <label for="assign1-grade">Input Assignment 1 Grade:</label>
+            <input class="form-control" type="number" name="assign1-grade" value="{{ grade_val(form['assign1']) }}" min="0" max="100">
+        </div>
+    </div>
+    <div class="form-element">
+        <label for="assign2">Assignment 2 Status:</label>
+        <select form="grades-form" name="assign2" class="form-control dropdownSelect" id="assign2">
+            {{ grade_dropwdown(form['assign2']) }}
+        </select>
+        <div class="form-element grade-input" id="assign2-grade">
+            <label for="assign2-grade">Input Assignment 2 Grade:</label>
+            <input class="form-control" type="number" name="assign2-grade" value="{{ grade_val(form['assign2']) }}" min="0" max="100">
+        </div>
+    </div>
+    <div class="form-element">
+        <label for="assign3">Assignment 3 Status:</label>
+        <select form="grades-form" name="assign3" class="form-control dropdownSelect" id="assign3">
+            {{ grade_dropwdown(form['assign3']) }}
+        </select>
+        <div class="form-element grade-input" id="assign3-grade">
+            <label for="assign3-grade">Input Assignment 3 Grade:</label>
+            <input class="form-control" type="number" name="assign3-grade" value="{{ grade_val(form['assign3']) }}" min="0" max="100">
+        </div>
+    </div>
+    <div class="form-element">
+        <label for="assign4">Assignment 4 Status:</label>
+        <select form="grades-form" name="assign4" class="form-control dropdownSelect" id="assign4">
+            {{ grade_dropwdown(form['assign4']) }}
+        </select>
+        <div class="form-element grade-input" id="assign4-grade">
+            <label for="assign4-grade">Input Assignment 4 Grade:</label>
+            <input class="form-control" type="number" name="assign4-grade" value="{{ grade_val(form['assign4']) }}" min="0" max="100">
+        </div>
+    </div>
+    <div class="form-element">
+        <label for="midterm">Midterm Status:</label>
+        <select form="grades-form" name="midterm" class="form-control dropdownSelect" id="midterm">
+            {{ grade_dropwdown(form['midterm']) }}
+        </select>
+        <div class="form-element grade-input" id="midterm-grade">
+            <label for="midterm-grade">Input Midterm Grade:</label>
+            <input class="form-control" type="number" name="midterm-grade" value="{{ grade_val(form['midterm']) }}" min="0" max="100">
+        </div>
+    </div>
+    <div class="form-element">
+        <label for="final">Final Exam Status:</label>
+        <select form="grades-form" name="final" class="form-control dropdownSelect" id="final">
+            {{ grade_dropwdown(form['final']) }}
+        </select>
+        <div class="form-element grade-input" id="final-grade">
+            <label for="final-grade">Input Final Exam Grade:</label>
+            <input class="form-control" type="number" name="final-grade" value="{{ grade_val(form['final']) }}" min="0" max="100">
+        </div>
+    </div>
+    <div class="form-element">
+        <button id="submit" type="submit">Submit Marks</button>
+    </div>
+</form>
+{% endblock %}

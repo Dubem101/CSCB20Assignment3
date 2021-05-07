@@ -1,0 +1,12 @@
+/* General rounded button */
+/* in form <div><a></a></div> */
+.round-btn a {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 2vh;
+  margin: 5px;
+}
+
+.round-btn a:hover {
+  transition: 0.3s;
+}

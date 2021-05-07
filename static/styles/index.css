@@ -1,0 +1,70 @@
+#signin-section {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/static/images/SigninBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* To make the sign in box vertically and horizontally centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#signin-box {
+  background-color: white;
+  color: var(--blue-main);
+  width: 75vw;
+  padding: 10px 40px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#signin-form {
+  text-align: left;
+}
+
+/* header styling */
+header {
+  margin-bottom: 24px;
+}
+
+#course-title {
+  font-family: "Times New Roman", Cambria, Cochin, Georgia, Times, serif;
+  color: var(--blue-uoft);
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+#logo {
+  width: 100%;
+}
+
+/* General html tag styling */
+body {
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+
+h2 {
+  font-weight: lighter;
+}
+
+/* Mobile responsiveness */
+/* Small tablets and up */
+@media only screen and (min-width: 1268px) {
+  #signin-box {
+    margin-top: 0;
+    padding: 20px 40px;
+    width: 30vw;
+  }
+  #logo {
+    width: 300px;
+  }
+}

@@ -1,0 +1,235 @@
+/* global colour variables */
+:root {
+  --blue-main: #000034;
+  --blue-uoft: #002f65;
+  --grey-main: lightgray;
+  --grey-lighter: rgb(236, 236, 236);
+}
+
+/* Main navigation bar styling */
+nav {
+  background-color: var(--blue-main);
+  z-index: 10;
+  display: block;
+  position: sticky;
+  top: 0;
+  max-width: 100vw;
+  z-index: 10;
+  box-shadow: 0 0 5px rgb(175, 175, 175);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#navbar-home {
+  order: 1;
+}
+
+.navbar-item {
+  order: 2;
+  display: none;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* For mobile navbar */
+.navbar-item.active {
+  display: block;
+}
+
+.navbar-item:hover {
+  background-color: lightblue;
+  transition: 0.3s;
+}
+
+.navbar-item a {
+  padding: 1rem;
+  color: aliceblue;
+  font-size: 1rem;
+}
+
+#dashboard {
+  border-radius: 20px;
+  background-color: rgb(93, 108, 192);
+  width: fit-content;
+  margin: 5px auto;
+  box-shadow: 0px 2px 5px 2px rgb(26, 26, 26);
+}
+
+#dashboard a{
+  padding: 0.5rem 1rem;
+}
+
+#dashboard:hover {
+  background-color: rgb(59, 68, 121);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+/* Menu icon */
+#nav-icon{
+  display: block;
+  order: 0;
+}
+
+/* entire thing looks clickable */
+#nav-icon:hover{
+  cursor: pointer;
+}
+
+#nav-icon img{
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+
+#nav-icon img:hover{
+  cursor: pointer;
+}
+
+
+/* Main content styling */
+#main-content {
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0px 0px 20px 10px grey;
+  padding: 10px;
+  flex: 1 0 auto;
+}
+
+#page-title {
+  background-color: rgb(236, 236, 236);
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Footer styling */
+footer {
+  background-color: rgb(15, 13, 34);
+  color: rgb(187, 187, 187);
+  padding: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+.footer-item a:link {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(187, 187, 187);
+}
+
+.footer-item a:visited {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(187, 187, 187);
+}
+
+#faculty-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* Error messages */
+.alert {
+  width: 100%;
+  background-color: grey;
+  border: 1px solid black;
+  font-size: 1.25rem;
+  margin: 8px 0px;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.alert.alert-error {
+  color: red;
+  background-color: rgb(250, 226, 226);
+  border: 1px solid red;
+}
+
+.alert.alert-msg {
+  color: rgb(148, 126, 0);
+  background-color: rgb(255, 254, 179);
+  border: 1px solid rgb(255, 184, 30);
+}
+
+.alert.alert-success {
+  color: rgb(0, 109, 5);
+  background-color: rgb(196, 255, 179);
+  border: 1px solid rgb(21, 141, 41);
+}
+
+/* General html tag styling */
+body {
+  background-color: var(--grey-main);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav,
+footer {
+  flex: 0 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Mobile responsiveness */
+/* Tablets and up */
+@media only screen and (min-width: 769px) {
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .navbar-links {
+    flex: 1 0 1;
+  }
+  
+  /* make all links visible */
+  .navbar-item {
+    display: block;
+  }
+
+  #dashboard {
+    margin: 0 5px;
+  }
+
+  /* except hamburger icon */
+  #nav-icon{
+    display: none;
+  }
+}

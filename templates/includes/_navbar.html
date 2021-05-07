@@ -1,0 +1,26 @@
+{% set active_page = active_page|default('index') -%}
+
+<nav>
+  <ul id="navbar">
+    <li class="navbar-item active" id="navbar-home">
+      <a href="{{ url_for('home')}}">CSCB63</a>
+    </li>
+    <li class="navbar-item"><a href="{{ url_for('calendar')}}">Calendar</a></li>
+    <li class="navbar-item">
+      <a href="http://piazza.com/utoronto.ca/winter2021/cscb63h3slec01/home" target="_blank">Piazza</a>
+    </li>
+    <li class="navbar-item">
+      <a href="https://markus.utsc.utoronto.ca/cscb63w21/" target="_blank">MarkUs</a>
+    </li>
+    <li class="navbar-item">
+      <a href="{{ url_for('weekly')}}">Weekly Content</a>
+    </li>
+    <li class="navbar-item">
+      <a href="{{ url_for('assignments')}}">Assignments</a>
+    </li>
+    <li class="navbar-item"><a href="{{ url_for('links')}}">Links</a></li>
+    <li class="navbar-item" id="dashboard"><a href="{{ url_for('dashboard')}}">Dashboard</a></li>
+    <li class="navbar-item" id="nav-icon" onclick="toggleNav()"><img src="/static/images/hamburgerIcon.png"
+        alt="Menu icon"></li>
+  </ul>
+</nav>
